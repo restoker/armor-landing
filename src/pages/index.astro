@@ -7,12 +7,26 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<div class="h-svh w-svw">
-		<section class="h-1/2 bg-black"></section>
+	<div class="h-svh mx-4">
 		<section class="h-1/2">
-			<div class="mx-2 h-full relative">
+			<div class="grid grid-cols-3 grid-rows-1 gap-4 h-full pt-4">
+				<div
+					class="row-span-2 bg-zinc-500 flex flex-col justify-end font-thin items-center"
+				>
+					<h1 class="text-8xl">
+						Think better
+						<br />
+						with <span class="italic">Armor</span>
+					</h1>
+				</div>
+				<div class="row-span-2 bg-lime-400">2</div>
+				<div class="row-span-2 bg-cyan-400">3</div>
+			</div>
+		</section>
+		<section class="h-1/2">
+			<div class="h-full relative rounded-4xl py-4">
 				<video
-					class="z-0 h-full w-full w-fit object-cover select-none py-2 rounded-4xl"
+					class="z-0 h-full w-full object-cover select-none rounded-4xl"
 					preload="true"
 					autoplay
 					loop
