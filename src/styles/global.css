@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-primary-light: #ff99d1;
+    --color-primary: #ff0695;
+
+    --color-theme-blue: #383acf;
+    --color-theme-blue-light: #66dfff;
+    --color-theme-cyan: #61e2e5;
+    --color-theme-green: #2b8364;
+    --color-theme-green-light: #98d354;
+
+    --font-special: "Amertha", sans-serif;
+
+    /* animations */
+
+    --animate-marquee: slide-left 10s linear infinite;
+    --animate-shiny: shiny 5s linear forwards infinite;
+
+    @keyframes slide-left {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-100% - 1rem));
+        }
+    }
+
+    @keyframes shiny {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: -200% 0;
+        }
+    }
+}
