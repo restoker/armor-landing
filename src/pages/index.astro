@@ -2,21 +2,27 @@
 // import Welcome from "../components/Welcome.astro";
 import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
-import TitlePage from "@/components/TitlePage.astro";
+// import TitlePage from "@/components/TitlePage.astro";
 ---
 
 <Layout>
 	<div class="h-svh mx-4">
 		<section class="h-1/2">
 			<div class="grid grid-cols-4 grid-rows-1 gap-4 h-full pt-4">
-				<TitlePage />
+				<div class="flex flex-col justify-end font-light items-center">
+					<h1 class="text-7xl title">
+						Think better
+						<br />
+						with <span class="italic">Armor</span>
+					</h1>
+				</div>
 				<div class="col-span-2 flex flex-col justify-end font-thin">
-					<p class="px-4 text-xl font-extralight">
+					<p class="px-4 text-xl font-extralight center__description">
 						Organize your thoughts, and act as your intellectual.
 					</p>
 				</div>
 				<div class="col-start-4 flex flex-col justify-end font-thin">
-					<p class="px-4 text-xl font-extralight">
+					<p class="px-4 text-xl font-extralight left__description">
 						Mirror ten way your mind works try associating notes
 						through backlinks. Reflect builds you a second brain
 						that you can reference anytime.
@@ -25,11 +31,9 @@ import TitlePage from "@/components/TitlePage.astro";
 			</div>
 		</section>
 		<section class="h-1/2 py-4">
-			<div
-				class="h-full relative rounded-4xl overflow-hidden bg-amber-300"
-			>
+			<div class="h-full relative rounded-4xl overflow-hidden">
 				<video
-					class="absolute h-full w-full object-cover z-0 select-none rounded-4xl"
+					class="absolute h-full w-full object-cover z-0 select-none rounded-4xl [clip-path:circle(3.5%)] video__element"
 					preload="true"
 					autoplay
 					loop
@@ -46,7 +50,7 @@ import TitlePage from "@/components/TitlePage.astro";
 					class="grid grid-cols-7 grid-rows-4 gap-4 z-20 relative h-full pr-4 pb-4"
 				>
 					<div class="col-start-1 row-start-4">
-						<div class="flex justify-center">
+						<div class="flex justify-center grid__element">
 							<Icon
 								name="processor-outline"
 								width="24"
@@ -56,49 +60,49 @@ import TitlePage from "@/components/TitlePage.astro";
 						</div>
 					</div>
 					<div
-						class="col-start-4 row-start-3 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl"
+						class="col-start-4 row-start-3 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl grid__elements"
 					>
 						<Icon name="calendar-outline" width="24" height="24" />
-						<p>The cat</p>
+						<p>Calendar</p>
 					</div>
 					<div
-						class="col-start-5 row-start-3 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl"
+						class="col-start-5 row-start-3 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl grid__elements"
 					>
 						<Icon name="logout-outline" width="24" height="24" />
-						<p>The cat</p>
+						<p>anten</p>
 					</div>
 					<div
-						class="col-start-6 row-start-3 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl"
+						class="col-start-6 row-start-3 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl grid__elements"
 					>
 						<Icon name="movie-outline" width="24" height="24" />
 						<p>The cat</p>
 					</div>
 					<div
-						class="col-start-7 row-start-3 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl"
+						class="col-start-7 row-start-3 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl grid__elements"
 					>
 						<Icon name="bluetooth-outline" width="24" height="24" />
 						<p>The cat</p>
 					</div>
 					<div
-						class="col-start-4 row-start-4 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl"
+						class="col-start-4 row-start-4 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl grid__elements"
 					>
 						<Icon name="wifi-outline" width="24" height="24" />
 						<p>The cat</p>
 					</div>
 					<div
-						class="col-start-5 row-start-4 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl"
+						class="col-start-5 row-start-4 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl grid__elements"
 					>
 						<Icon name="apple-outline" width="24" height="24" />
 						<p>The cat</p>
 					</div>
 					<div
-						class="col-start-7 row-start-4 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl"
+						class="col-start-7 row-start-4 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl grid__elements"
 					>
 						<Icon name="computer-outline" width="24" height="24" />
 						<p>The cat</p>
 					</div>
 					<div
-						class="col-start-6 row-start-4 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl"
+						class="col-start-6 row-start-4 bg-white/5 rounded-xl items-center flex flex-col justify-center backdrop-blur-xl grid__elements"
 					>
 						<Icon
 							name="internetcomputer-outline"
@@ -112,3 +116,5 @@ import TitlePage from "@/components/TitlePage.astro";
 		</section>
 	</div>
 </Layout>
+
+<script src="../scripts/index.js"></script>
