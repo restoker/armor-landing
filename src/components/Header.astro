@@ -1,16 +1,22 @@
 <header class="animate-blur-header fixed top-0 z-60 w-screen">
     <nav
-        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 pb-0 uppercase lg:px-8"
+        class="mx-auto flex items-center justify-between px-4 py-6 pb-0 uppercase lg:px-8"
         aria-label="Global"
     >
         <div class="flex flex-1">
-            <div class="hidden lg:flex lg:gap-x-12">
-                <a
+            <div class="hidden lg:flex lg:gap-x-2 lg:items-center">
+                <img
+                    class="text-black size-28 hover:cursor-pointer"
+                    src="/img/Logo.svg"
+                    alt=""
+                    srcset=""
+                />
+                <!-- <a
                     href="/#info"
-                    class="relative text-sm/6 font-semibold text-white after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
-                    >Info</a
-                >
-                <a
+                    class="relative text-sm/6 font-semibold text-black after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+                    >Armor</a
+                > -->
+                <!-- <a
                     href="/#faq"
                     class="relative text-sm/6 font-semibold text-white after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                     >Preguntas</a
@@ -19,7 +25,7 @@
                     href="/hoja-de-responsabilidad.pdf"
                     class="relative text-sm/6 font-semibold text-white after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                     target="_blank">Aut. Menores</a
-                >
+                > -->
             </div>
             <div class="flex lg:hidden">
                 <button
@@ -48,16 +54,16 @@
         </div>
 
         <div class="flex flex-1 justify-end">
-            <div class="relative flex flex-col items-end">
-                <span
-                    class="relative cursor-not-allowed text-sm/6 font-semibold text-white opacity-70"
-                    >Comprar Entradas <span aria-hidden="true">&rarr;</span
-                    ></span
+            <div class="relative flex flex-col items-start">
+                <button
+                    class="relative text-sm/5 font-light text-white bg-black py-2 px-6 rounded-2xl w-full"
                 >
-                <span
-                    class="text-primary-light absolute -bottom-3 w-full text-center text-[10px] normal-case"
-                    >Próximamente...</span
-                >
+                    start the flow
+                </button>
+                <button
+                    class="relative text-sm/5 font-light text-black bg-white mt-4 py-2 px-6 rounded-2xl w-full"
+                    >Learn more
+                </button>
             </div>
         </div>
     </nav>
