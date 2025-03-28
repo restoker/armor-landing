@@ -1,8 +1,5 @@
 # Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
-```
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ## 🧞 Commands
@@ -19,4 +16,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 ## 👀
-
