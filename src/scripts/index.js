@@ -1,4 +1,7 @@
 import gsap from "gsap";
+import CustomEase from "gsap/CustomEase";
+
+gsap.registerPlugin(CustomEase);
 
 // DOM elements and animation-related variables
 let title;
@@ -10,6 +13,11 @@ let gridElements;
 let gridElement;
 let video;
 let animationTimeline; // GSAP timeline instance
+
+CustomEase.create(
+    "hop",
+    "M0,0 C0,0 0.056,0.445 0.175,0.445 0.294,0.445 0.332,0 0.332,0 0.332,0 0.414,1 0.671,1 0.991,1 1,0 1,0"
+);
 
 // Initialize DOM elements used in the animations.
 const initializeVariables = () => {
@@ -29,7 +37,7 @@ const animateHomepageElements = () => {
     // if (!gridContainer || !gridItems.length) return;
 
     // Hide the grid container before starting the animation.
-    gsap.set([logo, title, buttons, leftDescription, gridElements, gridElement, centerDescription], { opacity: 0 });
+    gsap.set([logo, buttons, leftDescription, gridElements, gridElement, centerDescription], { opacity: 0 });
 
     const tl = gsap.timeline({
         //     defaults: {
@@ -66,6 +74,21 @@ const animateHomepageElements = () => {
             yPercent: 0,
             clipPath: 'circle(100%)',
             delay: 0.8,
+        }, '<')
+        .fromTo(logo, {
+            yPercent: 50,
+        }, {
+            yPercent: 0,
+            opacity: 1,
+            ease: 'elastic.out(0.5, 0.4)',
+        }, '>-0.9')
+        .to(gridElement, {
+            opacity: 1,
+        }, '>-0.2')
+        .from(title, {
+            opacity: 0,
+            yPercent: -100,
+
         }, '<')
     //     .fromTo(
     //         lines,
