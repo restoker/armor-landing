@@ -38,7 +38,7 @@ const animateHomepageElements = () => {
     // if (!gridContainer || !gridItems.length) return;
     const letters = new SplitType(centerDescription);
     // Hide the grid container before starting the animation.
-    gsap.set([logo, buttons, leftDescription, gridElements, gridElement, centerDescription], { opacity: 0 });
+    // gsap.set([logo, buttons, leftDescription, gridElements, gridElement, centerDescription], { opacity: 0 });
 
     const tl = gsap.timeline({
         //     defaults: {
@@ -78,17 +78,21 @@ const animateHomepageElements = () => {
         }, '<')
         .fromTo(logo, {
             yPercent: 50,
+            opacity: 0,
         }, {
             yPercent: 0,
             opacity: 1,
             ease: 'elastic.out(0.5, 0.4)',
         }, '>-0.9')
-        .to(gridElement, {
-            opacity: 1,
-        }, '>-0.2')
-        .to(centerDescription, {
-            opacity: 1,
-        }, '<')
+        // .to(gridElement, {
+        //     opacity: 1,
+        // }, '>-0.2')
+        // .to(centerDescription, {
+        //     opacity: 1,
+        // }, '<')
+        // .to(title, {
+        //     opacity: 1,
+        // }, '<')
         .from(title, {
             opacity: 0,
             yPercent: -100,
@@ -101,34 +105,40 @@ const animateHomepageElements = () => {
                 each: 0.03
             },
         }, '<')
-        .to(leftDescription, {
-            opacity: 1,
-        }, '<')
+        // .to(leftDescription, {
+        //     opacity: 1,
+        // }, '<')
         .from(leftDescription, {
-            // opacity: 0,
+            opacity: 0,
             duration: 1.5,
             rotateZ: '-15deg',
             yPercent: 100,
             ease: 'elastic.out(0.5, 0.4)'
         }, '<')
-        .to(buttons, {
-            opacity: 1,
-        }, '<')
+        // .to(buttons, {
+        //     opacity: 1,
+        // }, '<')
         .from(buttons, {
+            opacity: 0,
             duration: 1.5,
             rotateZ: '15deg',
             yPercent: 100,
             ease: 'elastic.out(0.5, 0.4)'
         }, '<')
-        .to(gridElements, {
-            opacity: 1,
-        }, '<')
+        // .to(gridElements, {
+        //     opacity: 1,
+        // }, '<')
         .from(gridElements, {
+            opacity: 0,
             duration: 1.9,
             rotateZ: '25deg',
             yPercent: 100,
             ease: 'elastic.out(0.5, 0.4)'
         }, '<')
+        .from(gridElement, {
+            opacity: 0,
+
+        }, '<0.1')
     //     .fromTo(
     //         lines,
     //         { transformOrigin: '0% 50%', scaleX: 0 },
