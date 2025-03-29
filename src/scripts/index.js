@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
+import SplitType from "split-type";
 
 gsap.registerPlugin(CustomEase);
 
@@ -35,7 +36,7 @@ const initializeVariables = () => {
 
 const animateHomepageElements = () => {
     // if (!gridContainer || !gridItems.length) return;
-
+    const letters = new SplitType(centerDescription);
     // Hide the grid container before starting the animation.
     gsap.set([logo, buttons, leftDescription, gridElements, gridElement, centerDescription], { opacity: 0 });
 
@@ -51,7 +52,7 @@ const animateHomepageElements = () => {
         //     },
     });
 
-    tl
+    // tl
     // .from(video, {
     //     yPercent: 180,
     //     duration: 1.6,
@@ -85,10 +86,48 @@ const animateHomepageElements = () => {
         .to(gridElement, {
             opacity: 1,
         }, '>-0.2')
+        .to(centerDescription, {
+            opacity: 1,
+        }, '<')
         .from(title, {
             opacity: 0,
             yPercent: -100,
-
+            duration: 1.3,
+        }, '<')
+        .from(letters.chars, {
+            opacity: 0,
+            stagger: {
+                from: 'random',
+                each: 0.03
+            },
+        }, '<')
+        .to(leftDescription, {
+            opacity: 1,
+        }, '<')
+        .from(leftDescription, {
+            // opacity: 0,
+            duration: 1.5,
+            rotateZ: '-15deg',
+            yPercent: 100,
+            ease: 'elastic.out(0.5, 0.4)'
+        }, '<')
+        .to(buttons, {
+            opacity: 1,
+        }, '<')
+        .from(buttons, {
+            duration: 1.5,
+            rotateZ: '15deg',
+            yPercent: 100,
+            ease: 'elastic.out(0.5, 0.4)'
+        }, '<')
+        .to(gridElements, {
+            opacity: 1,
+        }, '<')
+        .from(gridElements, {
+            duration: 1.9,
+            rotateZ: '25deg',
+            yPercent: 100,
+            ease: 'elastic.out(0.5, 0.4)'
         }, '<')
     //     .fromTo(
     //         lines,
