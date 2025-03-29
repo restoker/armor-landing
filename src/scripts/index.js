@@ -51,6 +51,7 @@ const animateHomepageElements = () => {
         //         document.dispatchEvent(event);
         //     },
     });
+    animationTimeline = tl;
 
     // tl
     // .from(video, {
@@ -184,7 +185,12 @@ const init = () => {
     // }
 };
 
-init();
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('body').classList.remove('loading');
+    init();
+})
+
 // Run a callback only if the current page is the home page.
 // const handlePageEvent = (event, callback) => {
 //     const page = document.documentElement.getAttribute('data-page');
